@@ -1,3 +1,5 @@
+// ==================resets===================
+
 *, body {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -6,135 +8,34 @@
 
 
 // =======================header====================
-
-.responsive-menu img {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 40px;
-  filter: invert(1);
-  display: none;
-  @media screen and #{$sm-break}{
-    display: block;
-  }
-}
-nav {
-  background: $primary;
-  margin-bottom: 20px;
-  padding: 0px 20px;
-  height: 75px;
+.nav-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  .header {
-    img {
-      height: 50px;
+  img {
+  height: 35px;
+  }
+  .top-brands {
+    border: 1px solid black;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: flex-end;
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+      border: 1px solid red;
+      height: 100%;
     }
   }
-  .button {
-    background: $light;
-    border-radius: 50px;
-    padding: 10px 15px;
-    color: $dark;
-    @media screen and #{$sm-break}{
-      display: none;
-    }
-    &:hover {
-      cursor: pointer;
-      background: $accent;
-      color: $light;
-    }
+  .top-items {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
   }
-}
-
-
-// div {
-//   border: 1px solid red;
-// }
-
-a {
-  text-decoration: none;
-  color: $dark;
-}
-
-p {
-  line-height: 1.4em;
 }
 
 // ===================main=======================
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: auto;
-  margin-bottom: 50px;
-  justify-content: center;
-  max-width: 1100px;
-  @media screen and #{$lg-break} {
-    max-width: 774px;
-    justify-content: flex-start;
-  }
-  @media screen and #{$md-break} {
-    max-width: 511px;
-    justify-content: flex-start;
-  }
-  @media screen and #{$sm-break} {
-    justify-content: center;
-  }
-  .albums {
-    margin: .5%;
-    position: relative;
-    p:first-of-type {
-      font-weight: bold;
-    }
-    .hovers {
-      position: relative;
-      &:hover > .transparency {
-        opacity: 1;
-        cursor: pointer;
 
-      }
-      .transparency {
-        opacity: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        content: "";
-        z-index: 3;
-      }
-    }
-    img {
-      box-shadow: 1px 1px 5px grey;
-      display: block;
-      width: 250px;
-      height: 250px;
-      margin: 0 auto 6px auto;
-      @media screen and #{$sm-break} {
-        width: 350px;
-        height: 350px;
-
-      }
-    }
-  }
-}
-
-
-.transparency {
-  color: $light;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.3em;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-
-
-
-
-
-// footer
+// =================footer========================
