@@ -96,10 +96,22 @@ p {
   flex-wrap: wrap;
   align-items: center;
   margin: auto;
+  margin-bottom: 50px;
   justify-content: center;
   max-width: 1100px; }
+  @media screen and (max-width: 1057px) {
+    .cards {
+      max-width: 774px;
+      justify-content: flex-start; } }
+  @media screen and (max-width: 789px) {
+    .cards {
+      max-width: 511px;
+      justify-content: flex-start; } }
+  @media screen and (max-width: 600px) {
+    .cards {
+      justify-content: center; } }
   .cards .albums {
-    margin: 1%;
+    margin: .5%;
     position: relative; }
     .cards .albums p:first-of-type {
       font-weight: bold; }
