@@ -8,34 +8,144 @@
 
 
 // =======================header====================
+
+nav {
+  margin: 2%;
+}
+
+
 .nav-top {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid $border__gray;
+  a {
+    text-decoration: none;
+    color: $primary;
+  }
   img {
-  height: 35px;
+    width: 35px;
   }
   .top-brands {
-    border: 1px solid black;
+    // border: 1px solid black;
     display: flex;
     width: 40%;
     justify-content: space-around;
     align-items: flex-end;
+    img {
+      filter: invert(1) brightness(.5);
+    }
+    .jordan {
+      width: 25px;
+    }
+    .hurley {
+      width: 40px;
+    }
+    .converse {
+      width: 50px;
+    }
     .brand {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 25%;
-      border: 1px solid red;
       height: 100%;
+      border-right: 1px solid $border__gray;
     }
   }
   .top-items {
     display: flex;
-    width: 40%;
+    width: 30%;
     justify-content: space-around;
+    .item {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+      a {
+        font-size: 0.8em;
+      }
+      .cart {
+        width: 17px;
+        filter: invert(1) brightness(.5);
+      }
+      .flag {
+        width: 14px;
+      }
+    }
+    .item:first-child {
+      flex-grow: 3;
+    }
+  }
+}
+
+.nav-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+  img {
+    height: 75px;
+  }
+  a {
+    text-decoration: none;
+    color: $dark;
+  }
+  .bottom-main {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+    font-weight: bold;
+  }
+}
+.bottom-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  input {
+    padding: 10px;
+  }
+  img {
+    position: absolute;
+    height: 20px;
+    top: 26px;
+    left: 4px;
+
+
   }
 }
 
 // ===================main=======================
+.hero {
+  background: url(../img/hero.jpg);
+  background-size: cover;
+  height: 600px;
+  background-position: center center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .text {
+    margin-right: 50px;
+    text-align: right;
+    h1 {
+      color: $dark;
+      font-size: 3em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .buttons {
+      margin-top: 30px;
+      span {
+        background: $dark;
+        padding: 10px 20px;
+        color: white;
+        &:hover {
+          background: $border__gray;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
 
 // =================footer========================
