@@ -1,5 +1,5 @@
 // ==================resets===================
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Oswald');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400');
 *, body {
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
@@ -279,6 +279,7 @@ footer {
     line-height: 2em;
   }
   p a {
+    font-weight: lighter;
     font-size: .8em;
     color: $border__gray;
     @media #{$sm-break} {

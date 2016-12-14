@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Oswald");
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -276,6 +276,7 @@ footer {
     color: white;
     line-height: 2em; }
   footer p a {
+    font-weight: lighter;
     font-size: .8em;
     color: #c4c4c4; }
     @media (max-width: 650px) {
