@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Oswald");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,28 +48,39 @@ table {
 
 *, body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Oswald', sans-serif;
   transition: all ease-in-out 250ms; }
 
+.main-container {
+  position: relative; }
+
 nav {
-  margin: 2%; }
+  background-color: white;
+  width: 100%;
+  position: sticky; }
 
 .nav-top {
+  font-family: sans-serif;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(158, 156, 156, 0.64); }
+  border-bottom: 1px solid #c4c4c4; }
   .nav-top a {
     text-decoration: none;
     color: #777; }
   .nav-top img {
     width: 35px; }
+  @media (max-width: 650px) {
+    .nav-top {
+      display: none; } }
   .nav-top .top-brands {
     display: flex;
     width: 40%;
     justify-content: space-around;
-    align-items: flex-end; }
+    align-items: center; }
     .nav-top .top-brands img {
       filter: invert(1) brightness(0.5); }
+    .nav-top .top-brands .nike {
+      font-size: .8em; }
     .nav-top .top-brands .jordan {
       width: 25px; }
     .nav-top .top-brands .hurley {
@@ -81,14 +93,23 @@ nav {
       justify-content: center;
       width: 25%;
       height: 100%;
-      border-right: 1px solid rgba(158, 156, 156, 0.64); }
+      border-right: 1px solid #c4c4c4; }
+      .nav-top .top-brands .brand:hover {
+        background: #c4c4c4;
+        position: cursor; }
   .nav-top .top-items {
     display: flex;
     width: 30%;
     justify-content: space-around; }
+    @media (max-width: 1125px) {
+      .nav-top .top-items {
+        width: 40%; } }
+    @media (max-width: 850px) {
+      .nav-top .top-items {
+        width: 55%; } }
     .nav-top .top-items .item {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       flex: 1; }
       .nav-top .top-items .item a {
@@ -104,18 +125,36 @@ nav {
 .nav-bottom {
   display: flex;
   justify-content: space-between;
-  margin-left: 25px; }
+  margin-left: 25px;
+  margin-right: 25px; }
   .nav-bottom img {
-    height: 75px; }
+    height: 75px;
+    max-height: 100%; }
+    .nav-bottom img:hover {
+      transform: scaleX(-1); }
   .nav-bottom a {
     text-decoration: none;
     color: #333; }
+  @media (max-width: 650px) {
+    .nav-bottom {
+      height: 57px; } }
   .nav-bottom .bottom-main {
     display: flex;
     justify-content: space-around;
     width: 40%;
     align-items: center;
     font-weight: bold; }
+    @media (max-width: 1125px) {
+      .nav-bottom .bottom-main {
+        width: 50%; } }
+    @media (max-width: 850px) {
+      .nav-bottom .bottom-main {
+        width: 60%; } }
+    @media (max-width: 650px) {
+      .nav-bottom .bottom-main {
+        display: none; } }
+    .nav-bottom .bottom-main .main a:hover {
+      color: #787878; }
 
 .bottom-search {
   display: flex;
@@ -126,20 +165,34 @@ nav {
   .bottom-search img {
     position: absolute;
     height: 20px;
-    top: 26px;
+    top: 29px;
     left: 4px; }
+    @media (max-width: 650px) {
+      .bottom-search img {
+        top: 18px; } }
 
 .hero {
   background: url(../img/hero.jpg);
   background-size: cover;
-  height: 600px;
-  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: right center;
   display: flex;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+  min-height: 700px; }
+  @media (max-width: 650px) {
+    .hero {
+      background-position: center center; } }
   .hero .text {
-    margin-right: 50px;
+    margin-right: 10%;
     text-align: right; }
+    @media (max-width: 650px) {
+      .hero .text {
+        padding: 5px 5px 0 5px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 92%; } }
     .hero .text h1 {
       color: #333;
       font-size: 3em;
@@ -153,7 +206,151 @@ nav {
         padding: 10px 20px;
         color: white; }
         .hero .text .buttons span:hover {
-          background: rgba(158, 156, 156, 0.64);
+          background: #c4c4c4;
           cursor: pointer; }
+
+.hero-1 {
+  background: url(../img/jacket.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 700px; }
+  @media (max-width: 650px) {
+    .hero-1 {
+      background-position: right; } }
+  .hero-1 .text {
+    margin-left: 10%;
+    text-align: center; }
+    @media (max-width: 650px) {
+      .hero-1 .text {
+        padding: 5px 5px 0 5px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgba(29, 29, 29, 0.7);
+        width: 92%; } }
+    .hero-1 .text h1 {
+      color: white;
+      font-size: 3em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px; }
+    .hero-1 .text p {
+      color: white; }
+    .hero-1 .text .buttons {
+      margin-top: 30px; }
+      .hero-1 .text .buttons span {
+        background: white;
+        padding: 10px 20px;
+        color: #333; }
+        .hero-1 .text .buttons span:hover {
+          background: #333;
+          color: white;
+          cursor: pointer; }
+    @media (max-width: 650px) {
+      .hero-1 .text {
+        color: #c4c4c4; } }
+
+footer {
+  background-color: #333;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 15% 0 15%; }
+  @media (max-width: 1125px) {
+    footer {
+      padding: 50px 5% 0 5%; } }
+  @media (max-width: 650px) {
+    footer {
+      padding: 50px 15% 0 15%; } }
+  footer h5 {
+    font-size: .8em; }
+    @media (max-width: 650px) {
+      footer h5 {
+        font-size: .9em; } }
+  footer a {
+    text-decoration: none;
+    color: white;
+    line-height: 2em; }
+  footer p a {
+    font-size: .8em;
+    color: #c4c4c4; }
+    @media (max-width: 650px) {
+      footer p a {
+        display: none; } }
+  footer .left {
+    display: flex;
+    justify-content: space-around;
+    width: 70%; }
+    @media (max-width: 650px) {
+      footer .left {
+        display: block; } }
+    footer .left [class*="left-"] {
+      flex: 1; }
+  footer .right {
+    text-align: right; }
+    footer .right img {
+      filter: invert(1) brightness(0.4);
+      width: 30px; }
+      footer .right img:hover {
+        cursor: pointer;
+        filter: invert(1); }
+    @media (max-width: 650px) {
+      footer .right h5 {
+        display: none; }
+      footer .right .social-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 170px; } }
+  footer .copyright {
+    color: #c4c4c4;
+    position: absolute;
+    height: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 70%;
+    margin: 0 auto;
+    border-top: 1px solid #c4c4c4;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 1125px) {
+      footer .copyright {
+        width: 85%; } }
+    @media (max-width: 650px) {
+      footer .copyright {
+        width: 100%; } }
+    footer .copyright .copyright-left {
+      font-size: 0.7em;
+      display: flex;
+      justify-content: space-around;
+      width: 40%; }
+      @media (max-width: 850px) {
+        footer .copyright .copyright-left {
+          width: 50%; } }
+      @media (max-width: 650px) {
+        footer .copyright .copyright-left {
+          width: 100%; } }
+      footer .copyright .copyright-left h6 {
+        color: white; }
+      footer .copyright .copyright-left img {
+        align-self: center;
+        display: block; }
+    footer .copyright .copyright-right {
+      font-size: 0.9em;
+      display: flex;
+      justify-content: space-around;
+      width: 30%; }
+      @media (max-width: 850px) {
+        footer .copyright .copyright-right {
+          width: 50%; } }
+      @media (max-width: 650px) {
+        footer .copyright .copyright-right {
+          width: 0px; } }
 
 /*# sourceMappingURL=app.css.map */

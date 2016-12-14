@@ -1,20 +1,24 @@
 // ==================resets===================
-
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Oswald');
 *, body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Oswald', sans-serif;
   transition: all ease-in-out 250ms;
 }
 
+.main-container {
+  position: relative;
+}
 
 // =======================header====================
 
 nav {
-  margin: 2%;
+  background-color: white;
+  width: 100%;
+  position: sticky;
 }
-
-
 .nav-top {
+  font-family: sans-serif;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid $border__gray;
@@ -25,14 +29,20 @@ nav {
   img {
     width: 35px;
   }
+  @media #{$sm-break} {
+    display: none;
+  }
   .top-brands {
     // border: 1px solid black;
     display: flex;
     width: 40%;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
     img {
       filter: invert(1) brightness(.5);
+    }
+    .nike {
+      font-size: .8em;
     }
     .jordan {
       width: 25px;
@@ -50,15 +60,25 @@ nav {
       width: 25%;
       height: 100%;
       border-right: 1px solid $border__gray;
+      &:hover {
+        background: $border__gray;
+        position: cursor;
+      }
     }
   }
   .top-items {
     display: flex;
     width: 30%;
     justify-content: space-around;
+    @media #{$lg-break} {
+      width: 40%;
+    }
+    @media #{$md-break} {
+      width: 55%;
+    }
     .item {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       flex: 1;
       a {
@@ -82,12 +102,20 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-left: 25px;
+  margin-right: 25px;
   img {
     height: 75px;
+    max-height: 100%;
+    &:hover {
+    transform: scaleX(-1);
+    }
   }
   a {
     text-decoration: none;
     color: $dark;
+  }
+  @media #{$sm-break} {
+    height: 57px;
   }
   .bottom-main {
     display: flex;
@@ -95,6 +123,18 @@ nav {
     width: 40%;
     align-items: center;
     font-weight: bold;
+    @media #{$lg-break} {
+      width: 50%;
+    }
+    @media #{$md-break} {
+      width: 60%;
+    }
+    @media #{$sm-break} {
+      display: none;
+    }
+    .main a:hover {
+      color: darken($border__gray, 30%);
+    }
   }
 }
 .bottom-search {
@@ -107,10 +147,11 @@ nav {
   img {
     position: absolute;
     height: 20px;
-    top: 26px;
+    top: 29px;
     left: 4px;
-
-
+    @media #{$sm-break} {
+      top: 18px;
+    }
   }
 }
 
@@ -118,14 +159,25 @@ nav {
 .hero {
   background: url(../img/hero.jpg);
   background-size: cover;
-  height: 600px;
-  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: right center;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  min-height: 700px;
+  @media #{$sm-break} {
+    background-position: center center;
+  }
   .text {
-    margin-right: 50px;
+    margin-right: 10%;
     text-align: right;
+    @media #{$sm-break} {
+      padding: 5px 5px 0 5px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 92%;
+    }
     h1 {
       color: $dark;
       font-size: 3em;
@@ -138,7 +190,7 @@ nav {
       span {
         background: $dark;
         padding: 10px 20px;
-        color: white;
+        color: $light;
         &:hover {
           background: $border__gray;
           cursor: pointer;
@@ -148,4 +200,173 @@ nav {
   }
 }
 
+.hero-1 {
+  background: url(../img/jacket.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 700px;
+  @media #{$sm-break} {
+    background-position: right;
+  }
+  .text {
+    margin-left: 10%;
+    text-align: center;
+    @media #{$sm-break} {
+      padding: 5px 5px 0 5px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: rgba(29, 29, 29, 0.7);
+      width: 92%;
+    }
+    h1 {
+      color: $light;
+      font-size: 3em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $light;
+    }
+    .buttons {
+      margin-top: 30px;
+      span {
+        background: $light;
+        padding: 10px 20px;
+        color: $dark;
+        &:hover {
+          background: $dark;
+          color: $light;
+          cursor: pointer;
+        }
+      }
+    }
+    @media #{$sm-break} {
+      color: $border__gray;
+    }
+  }
+}
+
 // =================footer========================
+
+
+footer {
+  background-color: $dark;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 15% 0 15%;
+  @media #{$lg-break} {
+    padding: 50px 5% 0 5%;
+  }
+  @media #{$sm-break} {
+    padding: 50px 15% 0 15%;
+  }
+  h5 {
+    font-size: .8em;
+    @media #{$sm-break} {
+      font-size: .9em;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $light;
+    line-height: 2em;
+  }
+  p a {
+    font-size: .8em;
+    color: $border__gray;
+    @media #{$sm-break} {
+      display: none;
+    }
+  }
+  .left {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    @media #{$sm-break} {
+      display: block;
+    }
+    [class*="left-"] {
+      flex: 1;
+    }
+  }
+  .right {
+    text-align: right;
+    img {
+      filter: invert(1) brightness(.4);
+      width: 30px;
+      &:hover {
+        cursor: pointer;
+        filter: invert(1);
+      }
+    }
+    @media #{$sm-break} {
+      h5 {
+        display: none;
+      }
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 170px;
+    }
+    }
+  }
+  .copyright {
+    color: $border__gray;
+    position: absolute;
+    height: 40px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 70%;
+    margin: 0 auto;
+    border-top: 1px solid $border__gray;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media #{$lg-break} {
+      width: 85%;
+    }
+    @media #{$sm-break} {
+      width: 100%;
+    }
+    .copyright-left {
+      font-size: 0.7em;
+      display: flex;
+      justify-content: space-around;
+      width: 40%;
+      @media #{$md-break} {
+        width: 50%;
+      }
+      @media #{$sm-break} {
+        width: 100%;
+      }
+      h6 {
+        color: $light;
+      }
+      img {
+        align-self: center;
+        display: block;
+      }
+    }
+    .copyright-right {
+      font-size: 0.9em;
+      display: flex;
+      justify-content: space-around;
+      width: 30%;
+      @media #{$md-break} {
+        width: 50%;
+      }
+      @media #{$sm-break} {
+        width: 0px;
+      }
+    }
+  }
+}
