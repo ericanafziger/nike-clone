@@ -24,4 +24,4 @@ _Sass, HTML_
 
 *MIT*
 
-Copyright (c) 2016 **_ Erica Nafziger, and Nigel Burnett_**
+Copyright (c) 2016 **Erica Nafziger and Nigel Burnett**
